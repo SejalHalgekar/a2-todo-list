@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroTasks — AI-inspired To-Do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header" role="banner">
+      <div class="logo" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#g)"/>
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#8be9fd"/>
+              <stop offset="1" stop-color="#7f7eff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <h1 class="title">NeuroTasks</h1>
+        <p class="subtitle">A calm, AI-inspired to-do list — local only</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="task-form-heading">
+      <h2 id="task-form-heading" class="sr-only">Add task</h2>
+      <form id="task-form" class="task-form" novalidate>
+        <label for="task-input" class="visually-hidden">New task</label>
+        <div class="input-wrap">
+          <input id="task-input" name="task" type="text" placeholder="Add a new task..." autocomplete="off" required>
+          <button type="submit" id="add-btn" aria-label="Add task">Add</button>
+        </div>
+      </form>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <div class="footer-actions">
+        <div class="stats" id="task-stats">0 tasks</div>
+        <button id="clear-all" class="ghost">Clear All</button>
+      </div>
+    </section>
+
+    <footer class="app-footer">Built with localStorage • No servers</footer>
+  </main>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
